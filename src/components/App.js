@@ -1,15 +1,22 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/App.css';
 const App = () => {
-//code here
+
+
+  const [name, setName] = useState("_______");
+
+  const setthis = () => {
+    let tempname = document.getElementById("input").value;
+    setName(() => tempname);
+  }
   return (
     <div id="main">
-      <input id='input' onChange={}></input>
-      <button id='button' onClick={}>Click</button>
-      <p id='text'> Hello my name is ____ and I study at Newton School</p>
+      <input id='input' ></input>
+      <button id='button' onClick={setthis}>Click</button>
+      <p id='text'> Hello my name is {name} and I study at Newton School</p>
     </div>
   )
 }
 
-
+// onChange={}
 export default App;
